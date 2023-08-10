@@ -1,5 +1,5 @@
 {% set name = "napari-zelda" %}
-{% set version = "0.1.10" %}
+{% set version = "0.1.12" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/napari-zelda-{{ version }}.tar.gz
-  sha256: e4bcbcf2e844fef4acde982998f98c9f1752696becfbe838673d196da5505315
+  sha256: be4382e135556bc588f54a78c0a382e5498bb06a7cf0a16fd3ec9b0fb7c64689
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
