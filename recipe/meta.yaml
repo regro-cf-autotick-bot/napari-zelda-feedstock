@@ -43,8 +43,8 @@ test:
     - pip
 
 about:
-  home: https://pypi.org/project/napari-zelda/
-  summary: 'ZELDA: a 3D Image Segmentation and Parent-Child relation plugin for microscopy image analysis in napari'
+  home: https://pypi.org/project/napari-zelda
+  summary: 3D Image Segmentation and Parent-Child relation plugin for microscopy image analysis in napari
   license: BSD-3-Clause
   license_file: LICENSE
   dev_url: https://github.com/RoccoDAnt/napari-zelda
