@@ -6,18 +6,18 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/napari-zelda-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/napari-zelda-{{ version }}.tar.gz
   sha256: be4382e135556bc588f54a78c0a382e5498bb06a7cf0a16fd3ec9b0fb7c64689
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   noarch: python
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
     - setuptools-scm
   run:
     - datatable
@@ -28,7 +28,7 @@ requirements:
     - napari-plugin-engine >=0.1.4
     - numpy
     - pandas
-    - python >=3.7
+    - python >={{ python_min }}
     - qtpy
     - scikit-image
     - scipy
@@ -41,6 +41,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/napari-zelda
